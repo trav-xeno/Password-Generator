@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
           return false;
         } else if (this.range < 8 || this.range > 128) {
           alert("Enter Valid range between 9-128");
+          return false;
         } else if (
           this.spchar == false &&
           this.num == false &&
