@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>password generator</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="assessts/js/main.js"></script>
+
+    <link rel="stylesheet" href="./assessts/css/style.css" />
+  </head>
+  <body>
+    <main id="app" class="container">
+      <div class="row">
+        <h1 class="col s12 center-align  flex-text white-text">
+          <strong>Password Generator VUEJS Version</strong>
+        </h1>
+      </div>
+
+      <section class=" section card z-depth-5 tn-indent">
+        <div class="row ">
+          <h4 class="flow-text">
+            <strong>Generate a Password</strong>
+          </h4>
+          <hr />
+        </div>
+        <section v-if="seen">
+          <div class="row ">
+            <div class="input-field col s12 ">
+              <input
+                id="range"
+                type="number"
+                max="128"
+                min="8"
+                v-model="range"
+                class="validate"
+                pattern="[0-9]"
+              />
+              <label for="rangenumber">enter length 8-128: </label>
+            </div>
+            <!-- Switch -->
+            <div class="col s12" >
+                <div class="switch">
+                  <label>
+                    Special character:
+                
+                    Off
+                    <input type="checkbox" v-model="spchar" />
+                    <span class="lever"></span>
+                    On
+                  </label>
+                  <div>
+              <div class="switch">
+                 <label>
+                    Numeric Values:  
+                  
+                    Off  
+                    <input type="checkbox" v-model="num" />  
+                    <span class="lever"></span>  
+                    On
+                  </label>
+              <div>    
+              <div class="switch">
+                <label>
+                  lowercasae characters:
+              
+                  Off
+                  <input type="checkbox" v-model="lowerchar"/>
+                  <span class="lever"></span>
+                  On
+                </label>
+                <div>
+                <div class="switch">
+                  <label>
+                    Uppercase Characters:
+                
+                    Off
+                    <input type="checkbox" v-model="upperchar" />
+                    <span class="lever"></span>
+                    On
+                  </label>
+                  <div>
+          </div>
+          <button
+            class="submit waves-effect waves-light   btn-small "
+            @click="generate()"
+          >
+            Generate Password
+          </button>
+        </section>
+        <hr />
+        <div class="row">
+          <div class="col s12">
+            <div class="tn-border result">
+              <p class="flow-text ">{{password}}</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <button
+            id="start"
+            class="waves-effect waves-light btn-small col s4 green darken-2 "
+            :class="{disabled: seen}"
+            @click="seen = !seen"
+          >
+            Start
+          </button>
+          <div class="col s4"></div>
+          <button
+            id="start"
+            class="waves-effect waves-light btn-small col s4   light-blue darken-2"
+            v-if="isgenerated"
+            @click="toClipBoard"
+          >
+            copy to clipbaord
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
