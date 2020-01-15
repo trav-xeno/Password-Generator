@@ -6,4 +6,5 @@ The password will be comprised of alphanuemeric and special chacters.
 
 ## Javascript
 
-There are tow versions of this project. I wanted to display understanding of Javascript, but I have also been learninig Vue.js as well and thought this wold be good practice.
+I choose to learn vuejs at same time for this assignemnt. Overall there are a few functions created.
+iscomplete checks if input fields havebeen choosen. If they have been choosen and valid then it returns true and calls checkIfTrue. CheckIfTrue creates a string based on what the user has chosen. This string is then randomly accessed and generates a password.
