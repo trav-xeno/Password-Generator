@@ -111,31 +111,3 @@ var vm = new Vue({
     }
   }
 });
-
-/*
-var app = new Vue({
-  el: "#app",
-  data: {
-    test: "test",
-    complete: false,
-    seen: false,
-    range: 8,
-    spChar: "",
-    num: "",
-    lowchar: "",
-    upperchar: "",
-    password: ""
-  },
-  computed: {
-    isComplete() {
-      return (
-        this.range >= 8 &&
-        this.range <= 128 &&
-        this.spChar.length > 0 &&
-        this.num.length > 0 &&
-        this.lowchar.length > 0 &&
-        this.upperchar.length > 0
-      );
-    }
-  }
-}); */
