@@ -26,6 +26,11 @@ body {
     background-position: 0% 50%;
   }
 }
+.wordwrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: none;
+}
 .switch label input[type="checkbox"]:checked + .lever {
   background-color: #1f1f70;
 }
@@ -45,7 +50,9 @@ body {
   border-radius: 10px;
 }
 .result {
-  height: 500px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 400px;
 }
 .tn-indent {
   padding-left: 5%;

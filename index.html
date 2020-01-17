@@ -21,7 +21,7 @@
     <main id="app" class="container">
       <div class="row">
         <h1 class="col s12 center-align  flex-text white-text">
-          <strong>Password Generator VUEJS Version</strong>
+          <strong>Password Generator</strong>
         </h1>
       </div>
 
@@ -30,7 +30,6 @@
           <h4 class="flow-text">
             <strong>Generate a Password</strong>
           </h4>
-          <hr />
         </div>
         <section v-if="error">
           <div class="row">
@@ -40,6 +39,7 @@
           </div>
         </section>
         <section v-if="seen">
+          <hr />
           <div class="row ">
             <div class="input-field col s12 ">
               <input
@@ -107,7 +107,7 @@
         <div class="row">
           <div class="col s12">
             <div class="tn-border result">
-              <p class="flow-text ">{{password}}</p>
+              <p class="flow-text wordwrap">{{password}}</p>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@
             v-if="isgenerated"
             @click="toClipBoard"
           >
-            copy to clipbaord
+            copy
           </button>
         </div>
       </section>
