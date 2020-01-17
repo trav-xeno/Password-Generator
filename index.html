@@ -32,6 +32,13 @@
           </h4>
           <hr />
         </div>
+        <section v-if="error">
+          <div class="row">
+            <div class="col s12">
+              <p class="red-text flex-text">{{errorMsg}}</p>
+            </div>
+          </div>
+        </section>
         <section v-if="seen">
           <div class="row ">
             <div class="input-field col s12 ">

@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
 var vm = new Vue({
   el: "#app",
   data: {
+    error: false,
+    errorMsg: "",
     seen: false,
     range: null,
     num: false,
@@ -18,19 +20,30 @@ var vm = new Vue({
   methods: {
     toClipBoard: function() {
       try {
-        // 1) Copy text found in console lol very helpful to then look up
+        // Copy text... found in console lol very helpful to then look up methods
         navigator.clipboard.writeText(this.password);
       } catch (err) {
         console.error("Failed to copy: ", err);
       }
     },
     isComplete: function() {
-      console.log(this.range);
-      if (this.range === null) {
-        alert("enter data range please!");
+      if (
+        this.range == null &&
+        this.spchar == false &&
+        this.num == false &&
+        this.lowerchar == false &&
+        this.upperchar == false
+      ) {
+        this.error = true;
+        this.errorMsg = "Enter Valid length and choose an option please!";
+        return false;
+      } else if (this.range == null) {
+        this.error = true;
+        this.errorMsg = "Enter a length please!";
         return false;
       } else if (this.range < 8 || this.range > 128) {
-        alert("Enter Valid range between 9-128");
+        this.error = true;
+        this.errorMsg = "Enter Valid range between 8-128";
         return false;
       } else if (
         this.spchar == false &&
@@ -38,16 +51,18 @@ var vm = new Vue({
         this.lowerchar == false &&
         this.upperchar == false
       ) {
-        alert("select at least one option!");
+        this.error = true;
+        this.errorMsg = "select at least one option!";
         return false;
       } else {
+        this.error = false;
         this.checkIfTrue();
         return true;
       }
     },
     checkIfTrue: function() {
       let lowerCase = "abcdefghijklmnopqrstuvwxyz";
-      let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let upperCase = lowerCase.toUpperCase();
       //for some reason doesn't give uppercase any values lowerCase.toUpperCase();
       let number = "0123456789";
       let sp = "!@#-_.,:|~?+*=";
