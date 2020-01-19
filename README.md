@@ -12,6 +12,7 @@ iscomplete checks if input fields have been selected. If they have been chosen a
 ## Screenshots!
 
 <img src="images/startscreen.png" alt="starting screen after page loads">
-### after clicking start
+
+### After clicking Start
 
 <img src="images/activescreen.png">
