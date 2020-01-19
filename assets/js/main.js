@@ -102,6 +102,7 @@ var vm = new Vue({
             this.characters += lowerCase;
             console.log(this.characters);
         } */
+      console.log(this.characters.length);
     },
     createPassword: function(str) {
       //call randomize which return

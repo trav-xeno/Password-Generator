@@ -8,3 +8,8 @@ The password will be comprised of alphanumeric and special characters based on t
 
 I choose to learn vuejs at same time for this assignemnt. Overall there are a few functions I created.
 iscomplete checks if input fields have been selected. If they have been chosen and valid then it returns true and calls checkIfTrue. CheckIfTrue creates a string based on what the user selection. This string is then randomly accessed and generates a password.
+
+## Screenshots!
+
+![start screen](assets/images/startScreenShot.PMG)
+![active screen](assets/images/activeScreenShot.PNG)
