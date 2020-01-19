@@ -11,5 +11,7 @@ iscomplete checks if input fields have been selected. If they have been chosen a
 
 ## Screenshots!
 
-![start screen](assets/images/startScreenShot.PMG)
-![active screen](assets/images/activeScreenShot.PNG)
+<img src="./assests/images/startScreenShot.PNG" alt="starting screen after page loads">
+### after clicking start
+
+<img src="./assests/images/activeScreenSnot.PNG">

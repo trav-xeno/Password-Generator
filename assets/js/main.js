@@ -72,19 +72,15 @@ var vm = new Vue({
 
       if (this.num) {
         this.characters += number;
-        console.log(this.characters);
       }
       if (this.spchar) {
         this.characters += sp;
-        console.log(this.characters);
       }
       if (this.lowerchar) {
         this.characters += lowerCase;
-        console.log(this.characters);
       }
       if (this.upperchar) {
         this.characters += upperCase;
-        console.log(this.characters);
       }
 
       /*
@@ -102,7 +98,6 @@ var vm = new Vue({
             this.characters += lowerCase;
             console.log(this.characters);
         } */
-      console.log(this.characters.length);
     },
     createPassword: function(str) {
       //call randomize which return
